@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+ul li{
+    list-style: none;
+}
+a,button,input,div{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+a:hover{
+    background: none;
+}
+.p2_words_5:hover,.p2_words_6:hover,.music_icon:hover{
+    background: none;
+    border:none;
+}
+a:active{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.show {
+    display: block;
+}
+.ab{
+    position: absolute;
+}
+.re{
+    position: relative;
+}
+.fx{
+    position: fixed;
+}
+.hide{
+    display: none;
+}
+.hidden{
+    overflow: hidden;
+}
+.page{
+    left:0;
+    bottom:0;
+}
+body{
+    background: #fff;
+}
+body img{
+    width:100%;
+    height:100%;
+}
+
+
+/*媒体查询,判断横屏竖屏*/
+@media screen and (orientation:portrait) {
+    /*  css[竖向定义样式]  */
+    #errorScreen{
+        display: none;}
+}
+@media screen and (orientation:landscape) {
+    /*   css[横向定义样式]  */
+    #errorScreen{
+        display: block;}
+}
+
+/*横竖屏提示*/
+#errorScreen {
+    background: #fff;
+    z-index: 10000;
+}
+#errorScreen .font{
+    width:4.2rem;
+    height:3.82rem;
+    left:5.9rem;
+    top:50%;
+    margin-top: -1.91rem;
+}
+
+._video{
+    width:1px;
+    height:1px;
+    z-index:-1;
+}
+#video1{
+    width:16rem;
+    height:28.5rem;
+    bottom:0;
+}
+.rem{
+    width:16rem;
+    height:28.5rem;
+    top:50%;
+    margin-top:-14.25rem;
+    left:50%;
+    margin-left:-8rem;
+}
+.rem_imp{
+    margin-top:-18.25rem;
+}
+.s{
+    z-index: 2;
+    height:2rem;
+    width:2rem;
+    text-align: center;
+    line-height: 2rem;
+    color:#999;
+    left:7rem;
+    font-size: 0.6rem;
+}
+.s1{
+    top:50%;
+    margin-top:-1rem;
+}
+.s2{
+    font-size: 0.4rem;
+    bottom:1rem;
+}
+.loading_gif{
+    width:16rem;
+    height:7.04rem;
+    top:50%;
+    margin-top:-3.52rem;
+}
+
+/*p1*/
+.music_icon{
+    width:2.6126rem;
+    height:0.7266rem;
+    right:0.3rem;
+    top:0.3rem;
+}
+.music_open,.music_close{
+    width:2.6126rem;
+    height:0.7266rem;
+}
+.p1 .p1_words_1{
+    width:8.7652rem;
+    height:1.7623rem;
+    left:3.6175rem;
+    bottom:11rem;
+    -webkit-animation-duration: 2.5s!important;
+    -webkit-animation-delay: 0.5s!important;
+}
+.p1 .p1_words_2{
+     width:10.5275rem;
+     height:1.3449rem;
+     left:2.736rem;
+     bottom:6.8rem;
+    -webkit-animation-duration: 1.5s!important;
+    -webkit-animation-delay: 1.5s!important;;
+ }
+.p1 .p1_words_3{
+    width:12.5990rem;
+    height:1.2058rem;
+    left:1.7rem;
+    bottom:7rem;
+}
+.z_index{
+    z-index: 100;
+}
+.p1 .tap{
+ /*   background: url("../img/p1/002.png") no-repeat center;
+    background-size: 100% 100%;*/
+    width:5rem;
+    height:5rem;
+    left:5.5rem;
+    bottom:5rem;
+    -webkit-user-select: none;
+    -webkit-touch-callout:none;
+    -webkit-animation-duration: 1s!important;
+    -webkit-animation-delay: 2s!important;
+}
+.panzi_small{
+    width:1.4rem;
+    height:1.4rem;
+    left:7.3rem;
+    bottom:6.8rem;
+    -webkit-animation-duration: 1s!important;
+    -webkit-animation-delay: 2.2s!important;
+}
+.tap_10086{
+    width:5rem;
+    height:5rem;
+    left:5.5rem;
+    bottom:5rem;
+    -webkit-user-select: none;
+    -webkit-touch-callout:none;
+}
+.tap_100861{
+   background: #333;
+}
+.p1_1{
+    -webkit-animation-duration: 1s!important;
+    -webkit-animation-delay: 0s!important;
+}
+
+.red_line1{
+    width:0.4174rem;
+    height:2.5198rem;
+    left:7.8rem;
+    top:13rem;
+}
+.red_line{
+    width: 0.786rem;
+    height: 2.5198rem;
+    left: 7.45rem;
+    top: 12.7rem;
+}
+.hand{
+    width: 0.8rem;
+    height: 0.85rem;
+    left:8.5rem;
+    top:12.9rem;
+}
+/*p2*/
+.p2 .logo{
+    width:4.4367rem;
+    height:1.1903rem;
+    right:0.5rem;
+    top:0.8rem;
+    -webkit-animation-duration: 3s!important;
+    -webkit-animation-delay: 0s!important;
+}
+.p2 .center{
+    width:13.2792rem;
+    height:7.1420rem;
+    left:1.5rem;
+    top:50%;
+    margin-top:-5rem;
+    -webkit-animation-duration: 3s!important;
+    -webkit-animation-delay: 0s!important;
+}
+.p2 .bottom{
+    width:16rem;
+}
+.p2 .bottom .p2_words_1{
+    width:7.4512rem;
+    height:0.7111rem;
+    left:4.275rem;
+    bottom:8.3rem;
+    -webkit-animation-duration: 1.5s!important;
+    -webkit-animation-delay: 2s!important;
+}
+.p2 .bottom .p2_words_2{
+    width:9.5072rem;
+    height:1.9633rem;
+    left:3.25rem;
+    bottom:6rem;
+    -webkit-animation-duration: 1.5s!important;
+    -webkit-animation-delay: 3s!important;
+}
+.p2 .bottom .p2_words_3{
+    width:10.4rem;
+    height:0.5720rem;
+    left:2.8rem;
+    bottom:5rem;
+    -webkit-animation-duration: 1.5s!important;
+    -webkit-animation-delay: 4s!important;
+}
+.p2 .bottom .p2_words_4{
+    width:7.8068rem;
+    height:1.2676rem;
+    left:4.1rem;
+    bottom:3.4rem;
+    -webkit-animation-duration: 1.5s!important;
+    -webkit-animation-delay: 5s!important;
+}
+.p2 .bottom .p2_words_5{
+    width:6.6937rem;
+    height:1.0976rem;
+    left:1rem;
+    bottom:1rem;
+    -webkit-animation-duration: 2s!important;
+    -webkit-animation-delay: 6s!important;
+}
+.p2 .bottom .p2_words_6{
+    width:6.3382rem;
+    height:1.0976rem;
+    right:1rem;
+    bottom:1rem;
+    -webkit-animation-duration: 2s!important;
+    -webkit-animation-delay: 6s!important;
+}
+.p2 .top{
+    -webkit-animation-duration: 2s!important;
+    -webkit-animation-delay: 0s!important;
+    z-index: 1000;
+}
+.p3_panzi{
+    width:2.8444rem;
+    height:2.8444rem;
+    right:0.3rem;
+    top:0.3rem;
+}
+.swiper-container{
+     width:7.2657rem;
+     height:4.4831rem;
+     right: 0.55rem;
+     bottom: 17.1rem;
+     transform: scale(0.78);
+     -webkit-animation-duration: 2s!important;
+     -webkit-animation-delay: 7.5s!important;
+ }
+.guita{
+    width:16rem;
+    height:9.4rem;
+    top:50%;
+    margin-top:-11rem;
+    -webkit-animation-duration: 2s!important;
+    -webkit-animation-delay: 2s!important;
+    z-index: 2;
+}
+.swiper-container1{
+    width: 7.8rem;
+    height: 4.4831rem;
+    right: -0.05rem;
+    bottom: 16.45rem;
+    transform: scale(0.98);
+    -webkit-animation-duration: 2s!important;
+    -webkit-animation-delay: 3s!important;
+    z-index: 1;
+}
+.video_btn{
+    width:1.4222rem;
+    height:1.4222rem;
+    right: 3.1rem;
+    bottom: 17.8rem;
+    z-index: 100;
+    transform: scale(1.3);
+}
+video{
+    background: #fff;
+}
+
+
+
+
