@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f26231-2040-4fb0-bede-9b1f477777bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vedio/css/main.css" afterPath="$PROJECT_DIR$/vedio/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vedio/index.html" afterPath="$PROJECT_DIR$/vedio/index.html" />
     </list>
     <ignored path="stuProject_act.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,20 +115,6 @@
               <option name="myItemId" value="stuProject_act" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="我去2027年" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stuProject_act" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stuProject_act" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -150,15 +137,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497189416561</updated>
-      <workItem from="1497189417881" duration="2070000" />
+      <workItem from="1497189417881" duration="2198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2070000" />
+    <option name="totallyTimeSpent" value="2198000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="36" width="1440" height="853" extended-state="1" />
+    <frame x="92" y="36" width="1440" height="853" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

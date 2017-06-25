@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <canvas id="canvas" style="border: 1px solid red;"></canvas>
+    </body>
+    <script>
+        
+        var tangram = [
+            {point: [[0, 0], [400, 0], [200, 200]], color: '#00ffb3'},
+            {point: [[0,0], [200, 200], [0, 400]], color: '#0ca276'},
+            {point: [[0, 400], [100, 300], [200, 400]], color: '#9c4293'},
+            {point: [[100, 300], [200, 200], [300, 300], [200, 400]], color: '#841178'},
+            {point: [[200, 200], [300, 100], [300, 300]], color: '#cea41c'},
+            {point: [[300, 100], [400, 0], [400, 200], [300, 300]], color: '#a9153b'},
+            {point: [[200, 400], [400, 200], [400, 400]], color: '#a1ab38'}
+        ];
+        
+
+        window.onload =function() {
+            var canvas = document.getElementById('canvas');
+            canvas.width = 1024;
+            canvas.height = 768;
+            var context = canvas.getContext('2d');
+
+            context.beginPath();
+            tangram.forEach(function(item, index) {
+                console.log(item);
+                context.beginPath();
+                context.moveTo(item.point[0][0], item.point[0][1]);
+                for(var i=1; i<item.point.length;i++) {
+                    context.lineTo(item.point[i][0], item.point[i][1]);
+                }
+                context.lineTo(item.point[0][0], item.point[0][1]);
+                context.closePath();
+                context.fillStyle = item.color;
+                context.fill();
+            });
+
+        }
+    </script>
+</html>

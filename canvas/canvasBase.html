@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <canvas id="canvas">
+            该浏览器不支持canvas
+        </canvas>
+    </body>
+    <script>
+        //part1:不使用css设置样式，不用px,因为这里不仅是设置画布的大小，还是设置里面点的像素问题
+        //part2: 可能有浏览器不兼容canvas
+        //part3: canvas.width canvas.height canvas.getContext('2d')
+        //part4 draw a line 
+        //part5 draw a circle
+
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.width = 1024;
+            canvas.height = 768;
+            if(canvas.getContext('2d')) {
+                var context =  canvas.getContext('2d')
+
+                // draw a line
+                context.beginPath();
+                context.moveTo(100, 100);
+                context.lineTo(300, 300);
+                context.lineTo(300, 700);
+                context.lineTo(100, 100);
+                context.closePath();
+
+                //直线绘制 
+                // context.lineWidth = 5;
+                // context.strokeStyle = 'red';
+                // context.stroke();
+
+                //多条线条时，1如果现象宽度一致时，则后面的页面会覆盖前面的颜色，2如果宽度不同时，则两种颜色都会显示，
+                // 为避免情况1发生，在线条绘制前后，使用beginPath() closePath()
+                // 但是以上操作又导致fill无效
+                // context.beginPath();
+                // context.moveTo(400, 100);
+                // context.lineTo(400, 700);
+                // context.closePath();
+
+
+                // context.lineWidth = 2;
+                // context.strokeStyle = 'orange';
+                // context.stroke();
+                
+
+                // 填充
+                context.fillStyle = 'rgb(2, 100, 30)';
+                context.fill();
+
+                // （圆心横坐标，圆心纵坐标，半径，开始弧度值，结束弧度值， 顺逆时针（false:默认逆时针； ture: 顺时针））
+                // 弧度值：0 0.5PI 1PI 1.5PI 5PI（顺时针）
+                // 如果不加beginPath closePath 则圆弧与上面的线条连接，加上也圆弧自身连接
+                // beginPath closePath并不一定要成对出现，以下不使用closePath,而且只有圆的绘制时，则不是封闭的
+                // closePath相对于fill是无效的
+                context.beginPath();
+                context.arc(300, 300, 200, 0, 0.5*Math.PI, true);
+                context.closePath();
+                context.stroke();
+            } else {
+                alert('该浏览器不支持canvas');
+            }
+            
+        }
+        
+    </script>
+</html>
