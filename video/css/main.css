@@ -1,0 +1,44 @@
+html, body{margin: 0;padding: 0;}
+body{background-color: white;width: 100%;height: 100%;}
+img{display: block;width: 100%;height: 100%;}
+.show{display: block;}
+.hide{display: none;}
+.ab{position: absolute;}
+.re{position: relative;}
+.fx{position: fixed;}
+.hidden{overflow: hidden;}
+
+
+/*errPage*/
+.errorPage .img_box{width: 6rem;height: 5rem;position: absolute;top:50%;left: 50%;margin-left: -3rem;margin-top:-2.5rem;}
+/*媒体查询*/
+@media screen and (orientation: portrait) {
+    .errorPage{
+        display: none;
+    }
+}
+@media screen and (orientation: landscape) {
+    .errorPage{
+        display: block;
+    }
+}
+
+/*startPae*/
+.start_box_01{width: 9rem;height: 2rem;top: 62%;left: 50%;margin-top: -1rem;margin-left: -4.5rem;-webkit-animation-duration: 2.5s!important;-webkit-animation-delay: 0.5s!important;}
+.start_box_02{width: 9rem;height: 1.6rem;top:71%;left: 50%;margin-left: -4.5rem;-webkit-animation-duration: 1.5s!important;-webkit-animation-delay: 1.5s!important;}
+.start_box_03{width: 11rem;height: 1.4rem;top: 71%;left: 50%;margin-left: -5.5rem;}
+.panzi_small_box{width: 1.4rem;height: 1.4rem;top:71%;left: 50%;margin-left: -0.7rem;-webkit-animation-duratin: 1s!important;-webkit-animation-delay: 2.2s!important;}
+.panzi_box{width: 4.5rem;height: 4.5rem;top:65%;left:50%;margin-left: -2.25rem;-webkit-animation-duration: 1s!important;-webkit-animation-delay: 2.2s!important;}
+.panzi_click_dom{width: 4.5rem;height: 4.5rem;top:65%;left: 50%;margin-left: -2.25rem;}
+
+.animated{-webkit-animation-duration:1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes fadeIn{
+    0%{opacity: 0;}100%{opacity: 1;}
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}100%{opacity: 1;}
+}
+.fadeIn{-webkit-animation-name: fadeIn;animation-name: fadeIn;}
+/*#video1{width: 16rem;height: 28.5rem;bottom: 0;}*/
+#video1{width: 100%;height: 100%;bottom: 0;}
+video{background: #fff;}

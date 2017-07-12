@@ -1,0 +1,92 @@
+/*∞¥≈•…¡∂Ø*/
+@-webkit-keyframes shan_out {
+    0% {
+        -webkit-transform: scale(0.7);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1.2);
+        opacity: 0.2;
+    }
+}
+.star1{
+    opacity: 0;
+    -webkit-animation: 1.6s shan_out linear 0s infinite;
+}
+.star2{
+    opacity: 0;
+    -webkit-animation: 1.6s shan_out linear 0.8s infinite;
+}
+
+@-webkit-keyframes shan_in {
+    0% {
+        -webkit-transform: scale(1.2);
+        opacity: 0.2;
+    }
+
+    100% {
+        -webkit-transform: scale(0.7);
+        opacity: 1;
+    }
+}
+.star3{
+    opacity: 0;
+    -webkit-animation: 1.6s shan_in linear 0s infinite;
+}
+.star4{
+    opacity: 0;
+    -webkit-animation: 1.6s shan_in linear 0.8s infinite;
+}
+
+@-webkit-keyframes up_down {
+    0% {
+        -webkit-transform: translateY(1.6rem);
+
+    }
+
+    50% {
+        -webkit-transform: translateY(0px);
+
+    }
+    100% {
+        -webkit-transform: translateY(1.6rem);
+
+    }
+}
+.up_down{
+    -webkit-animation: 3s up_down linear  infinite;
+}
+
+@-webkit-keyframes rotatez {
+    0% {
+        -webkit-transform: rotateZ(0deg) scale(1);
+
+    }
+
+    10% {
+        -webkit-transform: rotateZ(-5deg) scale(1);
+
+    }
+    20% {
+        -webkit-transform: rotateZ(5deg) scale(1);
+
+
+    }
+    30%{
+        -webkit-transform: rotateZ(-3deg) scale(1);
+    }
+    40%{
+        -webkit-transform: rotateZ(3deg) scale(1);
+    }
+    50%{
+        -webkit-transform: rotateZ(0deg) scale(1);
+    }
+    100% {
+        -webkit-transform: rotateZ(0deg) scale(1);
+
+    }
+}
+.rotatez{
+    -webkit-animation: 2s rotatez linear  infinite;
+}

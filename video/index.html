@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>妈妈的时间机器</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/my-animation.css">
+    </head>
+    <body>
+        <div class="mainPage">
+            <div class="page errorPage re">
+                <div class="img_box ab">
+                    <img src="img/errIcon.png"/>
+                </div>
+            </div>
+            <div class="page startPage re">
+                <!--poster:视频封面，没有播放时显示的图片-->
+                <!--playsinline：禁止 iPhone Safari 视频自动全屏-->
+                <!--x-webkit-airplay：支持Airplay的设备（如：音箱、Apple TV)播放-->
+                <!--x5-vedio-player-type／x-video-player-fullscreen：https://x5.tencent.com/tbs/guide/video.html-->
+                <video class="ab" id="video1" poster="img/loading0.jpg" playsinline="" webkit-playsinline="true" x5-vedio-player-type="h5" x-video-player-fullscreen="true" x-webkit-airplay="true">
+                    <source src="video/panzi5.mp4" type="">
+                </video>
+                <div class="start_box_01 ab animated fadeIn">
+                    <img src="img/start_01.png" alt=""/>
+                </div>
+                <div class="start_box_02 ab animated fadeIn">
+                    <img src="img/start_02.png" alt="">
+                </div>
+                <div class="panzi_small_box ab animated fadeIn">   
+                    <img src="img/panzi_small.png" alt="">
+                </div>    
+                <div class="start_box_03 ab hide">
+                    <img src="img/start_03.png" alt="">
+                </div>
+                <div class="panzi_box ab animated fadeIn">
+                    <img class="ab border1" src="img/panzi_border_01.png" alt="">
+                    <img class="ab border2" src="img/panzi_border_01.png" alt="">
+                    <img class="ab" src="img/panzi_border_02.png" alt="">
+                </div>
+                <div class="panzi_click_dom ab animated fadeIn"></div>
+            </div>
+        </div>
+    </body>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/main.js"></script>
+</html>
