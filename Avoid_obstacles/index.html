@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>三生三世十里桃花</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0,maximum-scale=1.0">
+        <!-- <link rel="stylesheet" href="//file.40017.cn/scyx/activity/2017/0728threeLife/css/style.css?v=111">  -->
+        <link rel="stylesheet" type="" href="./css/style.css">
+    </head>
+    <body>
+        <div class="contenter">
+            <div class="start ab page">
+                <div class="start_input re">
+                    <img class="start_input_bg" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/1_input_bg.png">
+                    <input class="font_14 ab start_input_txt clickDom" data-type="userName" type="text" placeholder="输入你爱人的名字"/>
+                </div>
+                <div class="re start_btn clickDom"  data-type="beginGame">
+                    <img id="beginGame" class="start_btn_img" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/1_start_btn.png"/>
+                </div>
+            </div>
+            <!--music  -->
+            <!-- <div class="soundbtn ab clickDom hide" data-type="control_sound"></div> -->
+            <div class="game page re hide">
+                <!--music  -->
+                <!-- <audio loop="loop" id="bgsound">
+                    <source src="http://h5.flyfinger.com/2016/didi/dirver/assets/bg.mp3" type="audio/mpeg">
+                </audio> -->
+                <span class="time_countdown ab font_28 color_write"></span>
+                <div class="flower_num_box ab">
+                    <img src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/flower.png" alt=""/>
+                    <span class="flower_count ab">0</span>
+                </div>
+                <canvas id="stage"></canvas>
+            </div>
+            
+            <div class="mask hide">
+                <div class="guider_box ab">
+                    <img class="guider_bg" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/tip-bg.png">
+                    <div class="guider_tip_box ab">
+                        <p class="tip_title color_red font_18 font_weight">游戏说明</p>
+                        <p class="tip_content font_14"></p>
+                    </div>
+                    <p class="guider_btn ab">
+                        <img class="playAgain clickDom" data-type="playAgain" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/again.png" alt="">
+                        <img class="toShare clickDom" data-type="toShare" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/to_share.png" alt="">
+                    </p>
+                </div>
+                <div class="phone_box ab">
+                    <div class="phone_input">
+                        <img src='//file.40017.cn/scyx/activity/2017/0728threeLife/images/1_input_bg.png' alt="">
+                        <input class="font_14 ab start_input_txt iphone_box clickDom" data-type="userPhone" type="tel" name="iphone" maxlength="11" placeholder="输入手机号码" oninput='this.value=this.value.replace(/\D/gi,"")'/>
+                    </div>
+                </div>
+                <div class="ab got_btn clickDom hide"  data-type="gotIt">
+                    <img id="gotIt" class="got_btn_img" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/got.png"/>
+                </div>
+                 <div class="ab get_btn clickDom"  data-type="getPackage">
+                    <img id="getPackage" class="get_btn_img" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/get_package.png"/>
+                </div>
+            </div>
+
+             <div class="red_package hide">
+                <img class="red_top_img" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/get_success.jpg" alt="">
+                <div class="suc_box">
+                    <p class="sucess_btn">
+                        <img class="playAgain clickDom" data-type="playAgain" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/again.png" alt=""/>
+                        <img class="toShare clickDom" data-type="toShare" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/to_share.png" alt=""/>
+                    </p>
+                    <div class="pkg_list">
+                        <!--<div class="list_item re">
+                            <img src="./images/pkg_bg.png"/>
+                            <div class="red_box ab">
+                                <div class="red_detail">
+                                    <p class="part1">&yen;<span>5</span></p>
+                                    <p class="part2">
+                                        <span class="block_show big_show">火车票</span>
+                                        <span class="block_show">满50元使用</span><span class="block_show">2017年3月1号到期</span>
+                                    </p>
+                                    <a class="part3 bg_gray">立即使用</a>
+                                    <a class="part3" style="display:none" href =''>立即使用</a>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="tip">
+                        <img class="tip_txt" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/suc_tip.png">
+                        <img class="tip_go clickDom" data-type="go" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/look.png">
+                    </div>
+                    <img class="logo" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="toast">
+            <div class="toast_tip"></div>
+        </div>
+        <div class="mask_tip clickDom" data-type="closeTip">
+            <img src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/share_tip.png"/>
+        </div>   
+    </body>
+    <script type="text/javascript" src="//file.40017.cn/scyx/activity/2017/0728threeLife/js/rem.js"></script>
+    <script type="text/javascript" src="//file.40017.cn/scyx/activity/2017/0728threeLife/js/zepto.min.js"></script>
+     <!-- <script type="text/javascript" src="//file.40017.cn/scyx/activity/2017/0728threeLife/js/index.js"></script>  -->
+     <script type="text/javascript" src="./js/index.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="//js.40017.cn/cn/min/??/touch/hb/p/share/wxshare.1.3.js?v=2016091901"></script>
+    <script src="//js.40017.cn/touch/hb/c/bridge.2.2.6.js?v=20161227"></script>
+    <script type="text/javascript">
+        if(_tc_bridge_public.isTc){
+            _tc_bridge_util.set_page({
+                "param": {
+                    "pagename": "h5_travel_threeeLife"
+                }
+            })
+        } else {
+            var _tcq = _tcq || [];
+            var _timediff=-1;
+            if(typeof _tcopentime != "undefined")
+            {_timediff = new Date().getTime()-_tcopentime;}
+            _tcq.push(['_serialid', '0']);
+            _tcq.push(['_vrcode', '10007-2000-0']);
+            _tcq.push(['_refId', '339006849']);
+            _tcq.push(['_userId', 0]);
+            _tcq.push(['_openTime', _timediff]);
+            _tcq.push(['_trackPageview', '/品牌/三生三世']);
+        }
+    </script>
+<script src="//vstlog.17usoft.com/vst.ashx" charset="utf-8"></script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0,maximum-scale=1.0">
+        <style type="text/css">
+            *{margin: 0;padding: 0;color:black;font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif,"Microsoft Yahei";font-size: 14px;}
+            body{scroll-behavior: smooth;width: 100%;height: 100%;}
+            img{display: block;}
+            .ab{position: absolute;}
+            .re{position: relative;}
+            .red_top_img{width: 100%;}
+            .sucess_btn img{display: inline-block;width: 40%;}
+            .sucess_btn{text-align: center;}
+            .suc_box{background: -webkit-linear-gradient(#1e154f, #11091e);background: -moz-linear-gradient(#1e154f, #11091e);background: -o-linear-gradient(#1e154f, #11091e);background: linear-gradient(#1e154f, #11091e);}
+            .pkg_list{margin-top: 3%;}
+            .list_item img{width: 90%;margin-left: 5%;}
+            .red_package {overflow: hidden;}
+            .red_box{top: 11%;width: 80%;left: 10%;}
+            .red_detail{margin-bottom: 2%;padding:2%;border-radius: 10px;}
+            .red_detail p{display: inline-block;vertical-align: middle;line-height: 1.2rem;}
+            .part1 {width: 15%;color: red;}
+            .part2 {width: 55%; color: #666;font-size: 12px;}
+            .part3 {display: inline-block;width: 22%;background-color: red;padding: 2%;border-radius: 5px;text-align: center;color: white;}
+            .part1 span{font-size: 24px;color: red;}
+            .block_show{display: block;}
+            .bg_gray{background-color: gray;}
+            .big_show{color: black;font-size: 18px;font-weight: bold;}
+            .tip{padding-bottom: 30%;}
+            .tip_txt{width: 70%;margin-left: 15%;margin-top: 6%;}
+            .tip_go{width: 50%;margin-left: 25%;margin-top:6%;}
+            .logo{width: 26%;margin-left: 37%;padding-bottom: 10%;}
+            .mask_tip{display:none;width: 100%;height: 100%;background: rgba(0,0,0,0.8);;z-index: 9999;position: fixed;top:0;bottom:0;}
+            .mask_tip img{position: absolute;right: 3%;top: 2%;width: 38%;}
+            a:-webkit-any-link {color: white;  cursor: none;  text-decoration: none;}
+        </style>
+    </head>
+    <body>
+        <div class="contenter">
+            <div class="red_package">
+                <img class="red_top_img" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/get_success.jpg" alt="">
+                <div class="suc_box">
+                    <p class="sucess_btn">
+                        <img class="playAgain clickDom" data-type="playAgain" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/again.png" alt=""/>
+                        <img class="toShare clickDom" data-type="toShare" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/to_share.png" alt=""/>
+                    </p>
+                    <div class="pkg_list">
+                        <!--<div class="list_item re">
+                            <img src="./images/pkg_bg.png"/>
+                            <div class="red_box ab">
+                                <div class="red_detail">
+                                    <p class="part1">&yen;<span>5</span></p>
+                                    <p class="part2">
+                                        <span class="block_show big_show">火车票</span>
+                                        <span class="block_show">满50元使用</span><span class="block_show">2017年3月1号到期</span>
+                                    </p>
+                                    <a class="part3 bg_gray">立即使用</a>
+                                    <a class="part3" style="display:none" href =''>立即使用</a>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="tip">
+                        <img class="tip_txt" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/suc_tip.png">
+                        <img class="tip_go clickDom" data-type="go" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/look.png">
+                    </div>
+                    <img class="logo" src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mask_tip clickDom" data-type="closeTip">
+            <img src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/share_tip.png"/>
+        </div>
+    </body>
+    <script type="text/javascript" src="//file.40017.cn/scyx/activity/2017/0728threeLife/js/rem.js"></script>
+    <script type="text/javascript" src="//file.40017.cn/scyx/activity/2017/0728threeLife/js/zepto.min.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="//js.40017.cn/cn/min/??/touch/hb/p/share/wxshare.1.3.js?v=2016091901"></script>
+    <script src="//js.40017.cn/touch/hb/c/bridge.2.2.6.js?v=20161227"></script>
+    <script type="text/javascript">
+       
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            else {
+                return null;
+            }
+         }
+        var pkgData = window.localStorage.getItem('pkgData');
+        alert(pkgData);
+        function renderPkg(data) {
+            var str = '';
+            data.forEach(function (item) {
+                str += '<div class="list_item re"><img src="//file.40017.cn/scyx/activity/2017/0728threeLife/images/pkg_bg.png"/><div class="red_box ab"><div class="red_detail">'+
+                      '<p class="part1">&yen;<span>' + item.ParValue + '</span></p><p class="part2"><span class="block_show big_show">'
+                       + item.ProjectName + '</span><span class="block_show">' + item.MinConsume + '</span><span class="block_show">'
+                       + item.EndTime + '</span></p>';
+                if(item.StatusId == 4) {
+                    str += '<a class="part3 bg_gray">' + item.StatusText + '</a></div></div></div>';
+                } else {
+                    str += '<a class="part3" href = "' + item.RedirectUrl + '">'+ item.StatusText + '</a></div></div></div>';
+                }
+            });
+            $('.pkg_list').html(str);
+        }
+        renderPkg(JSON.parse(pkgData));
+
+        $('.clickDom').click(function() {
+            if($(this).attr('data-type') == 'playAgain') {
+                location.href="index.html";
+            } else if($(this).attr('data-type') == 'toShare') {
+                share();
+            } else if($(this).attr('data-type') == 'go') {
+                location.href="http://m.17u.cn/app/la?refid=309581390&sUrl=tctclient%3A%7C%7Chomepage%7Chomepage";
+            } else if($(this).attr('data-type') == "closeTip") {
+                 $('.mask_tip').hide();
+            }
+        });
+
+        // todo update
+        function share() {
+            var shareTitle = '三生三世title';
+            var shareContent = '三生三世content';
+            var shareUrl = location.href;
+            var shareImg = 'http://file.40017.cn/scyx/activity/2017/0728threeLife/images/share_img.jpg';
+
+            if(_tc_bridge_public.isTc){
+                _tc_bridge_bar.shareInfoFromH5({
+                    param: {
+                        "tcsharetxt": shareTitle,
+                        "tcsharedesc": shareContent,
+                        "tcshareurl": shareUrl,
+                        "tcshareimg": shareImg
+                    },
+                    callback: function (data) {// 仅微信单独的分享才有回调信息。
+                        alert("callback:" + JSON.stringify(data));
+                    }
+                })
+            } else {
+                $('.mask_tip').show();
+                fed_wxshare.config({
+                    shareImg: shareImg,//必传
+                    shareUrl: shareUrl,//必传
+                    shareTitle: shareTitle,//非必传
+                    shareDesc: shareContent//非必传
+                })
+            }
+        }
+    
+    
+        var shareTitle = '三生三世title';
+        var shareContent = '三生三世content';
+        var shareUrl = location.href;
+        var shareImg = 'http://file.40017.cn/scyx/activity/2017/0728threeLife/images/share_img.jpg';
+
+        if(_tc_bridge_public.isTc){
+            _tc_bridge_bar.set_navbar({
+                "param": {
+                    'center': [{'tagname': "tag_title", 'value': '三生三世'}],
+                    "right": [{"tagname": "tag_click_city", "icon_type": "",'icon':'i_share'}]
+                },
+                'callback':function(data){
+                    _tc_bridge_bar.shareInfoFromH5({
+                        param: {
+                            "tcsharetxt": shareTitle,
+                            "tcsharedesc": shareContent,
+                            "tcshareurl": shareUrl,
+                            "tcshareimg": shareImg
+                        },
+                        callback: function (data) {// 仅微信单独的分享才有回调信息。
+                            // alert("callback:" + JSON.stringify(data));
+                        }
+                    })
+                }
+            })
+        } else {
+            fed_wxshare.config({
+                shareImg: shareImg,//必传
+                shareUrl: shareUrl,//必传
+                shareTitle: shareTitle,//非必传
+                shareDesc: shareContent//非必传
+            })
+        }
+    </script>
+</html>
